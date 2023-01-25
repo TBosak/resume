@@ -1,0 +1,15 @@
+<ion-card>
+  <app-header title="Experience"></app-header>
+  <ion-card-content>
+    <app-job-card
+      *ngFor="let job of jobs"
+      [jobtitle]="job.title"
+      [company]="job.company"
+      [startdate]="job.startdate"
+      [enddate]="job.enddate"
+      [description]="job.description"
+      [skills]="job.skills"
+      [img]="job.img">
+    </app-job-card>
+  </ion-card-content>
+</ion-card>

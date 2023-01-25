@@ -1,0 +1,25 @@
+<mat-dialog-title>Say Something Nice</mat-dialog-title>
+<mat-dialog-content align="center">
+  <form [formGroup]="reviewForm">
+<mat-form-field appearance="fill" floatLabel="auto">
+  <mat-label>Name</mat-label>
+  <input matInput placeholder="John Doe" [formControl]="nameControl">
+</mat-form-field><br /><br />
+<mat-form-field appearance="fill" floatLabel="auto">
+  <mat-label>Position</mat-label>
+  <input matInput placeholder="District Manager at Costco" [formControl]="positionControl">
+</mat-form-field><br /><br />
+<mat-form-field appearance="fill" floatLabel="auto">
+  <mat-label>Relationship</mat-label>
+  <input matInput placeholder="Former Classmate" [formControl]="relationControl">
+</mat-form-field><br /><br />
+<mat-form-field appearance="fill" floatLabel="auto">
+  <mat-label>Review</mat-label>
+  <textarea matInput placeholder="Tim is a hard worker..." [formControl]="descriptionControl"></textarea>
+</mat-form-field><br />
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <ion-button (click)="submit()">Submit</ion-button>
+  <ion-button mat-dialog-close>Cancel</ion-button>
+</mat-dialog-actions>

@@ -1,0 +1,15 @@
+<mat-grid-list cols="3" [rowHeight]="(rowHeight | async) ?? 0">
+<mat-grid-tile class="flip-card" *ngFor="let post of posts$ | async">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <b>{{post.name}}</b><br />
+      <i>{{post.position}}</i><br />
+      <i>{{post.relation}}</i>
+    </div>
+    <div class="flip-card-back">
+      {{post.description}}
+    </div>
+  </div>
+</mat-grid-tile>
+</mat-grid-list>
+<ion-button (click)="openDialog()">New Post</ion-button>

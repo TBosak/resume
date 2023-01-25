@@ -1,0 +1,14 @@
+<ion-card>
+  <app-header title="Education"></app-header>
+  <ion-card-content>
+    <app-edu-card
+      *ngFor="let school of schools"
+      [school]="school.title"
+      [degree]="school.degree"
+      [startdate]="school.startdate"
+      [enddate]="school.enddate"
+      [description]="school.description"
+      [img]="school.img">
+    </app-edu-card>
+  </ion-card-content>
+</ion-card>
