@@ -1,0 +1,19 @@
+<ion-card>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <app-header title="Portfolio"></app-header>
+    <mat-grid-tile *ngFor="let project of projects">
+      <ion-card>
+        <ion-title>
+          <a [href]="project.link" style="text-decoration: none;">
+            <b>{{ project.title }}</b>
+          </a>
+        </ion-title>
+        <ion-card-content>
+          <p>{{ project.description }}</p>
+        </ion-card-content>
+        <img *ngIf="project.link.includes('github')" [src]="project.img" [alt]="project.title" width="100%" height="100%">
+        <iframe *ngIf="!project.link.includes('github')" [src]="project.link | safe" [title]="project.title" width="100%" height="100%"></iframe>
+  </ion-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</ion-card>

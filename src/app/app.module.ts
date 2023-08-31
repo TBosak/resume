@@ -22,6 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
       JobCardComponent,
       EduCardComponent,
       BulletinComponent,
-      BulletinDialogComponent
+      PortfolioComponent,
+      BulletinDialogComponent,
+      SafePipe
    ],
   imports: [BrowserModule, BrowserAnimationsModule, ReactiveFormsModule, IonicModule.forRoot(), AppRoutingModule, FlexLayoutModule, HttpClientModule, MatGridListModule, MatDialogModule, MatFormFieldModule, MatInputModule, ScrollingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
