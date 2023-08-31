@@ -7,7 +7,7 @@ import { Post } from 'src/app/models/post';
  providedIn: 'root'
 })
 export class PostService {
- private url = 'http://localhost:5200';
+ private url = 'https://tbresume.onrender.com';
  private posts$: Subject<Post[]> = new Subject();
 
  constructor(private httpClient: HttpClient) { }
