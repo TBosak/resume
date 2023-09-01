@@ -25,6 +25,12 @@ export class PortfolioComponent implements OnInit {
       description: 'A note-keeper/time record for targeted case management or support broker billing that stores everything in a LiteDB database (UWP app).',
       link: 'https://github.com/TBosak/Casee-2.0',
       img: 'https://i.imgur.com/0Gwbsbi.png'
+    },
+    {
+      title: 'Kanban Board',
+      description: 'A basic Kanban board built in Angular, persists data in IndexedDB',
+      link: 'https://angular-kanban-theta.vercel.app/',
+      img: 'https://i.imgur.com/5Z2ZQ8M.png'
     }
   ]
 
