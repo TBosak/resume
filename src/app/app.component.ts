@@ -11,7 +11,7 @@ export class AppComponent {
     { title: 'Experience', url: '/experience', icon: 'business' },
     { title: 'Education', url: '/education', icon: 'school' },
     { title: 'Portfolio', url: '/portfolio', icon: 'briefcase' },
-    { title: 'Reviews', url: '/bulletin', icon: 'chatbubbles' },
+    { title: 'References', url: '/bulletin', icon: 'chatbubbles' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor(private persistence: PersistenceService) {}
