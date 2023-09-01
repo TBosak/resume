@@ -24,6 +24,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { TypingPipe } from './pipes/typing.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SafePipe } from './pipes/safe.pipe';
       BulletinComponent,
       PortfolioComponent,
       BulletinDialogComponent,
-      SafePipe
+      SafePipe,
+      TypingPipe
    ],
   imports: [BrowserModule, BrowserAnimationsModule, ReactiveFormsModule, IonicModule.forRoot(), AppRoutingModule, FlexLayoutModule, HttpClientModule, MatGridListModule, MatDialogModule, MatFormFieldModule, MatInputModule, ScrollingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
