@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PersistenceService } from 'src/services/persistence.service';
 import KeenSlder from 'keen-slider'
 import { Observable, concatMap, delay, from, of, repeat, tap } from 'rxjs';
+import { IonCard } from '@ionic/angular';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +11,7 @@ import { Observable, concatMap, delay, from, of, repeat, tap } from 'rxjs';
 })
 export class AboutComponent implements OnInit {
   title: string = 'About';
+  @ViewChild('card') card: ElementRef<HTMLDivElement> | undefined;
   images!: Observable<any>;
   constructor(private persistence: PersistenceService) { }
 
@@ -23,6 +25,14 @@ export class AboutComponent implements OnInit {
     ]).pipe(
       concatMap(img => of(img).pipe(delay(2500))),
       repeat());
+
+      this.images.subscribe({
+        next: (img) => {
+          if(this.card){
+            this.card.nativeElement.style.backgroundImage = `url(${img})`;
+          }
+        }
+      });
   }
 
 }

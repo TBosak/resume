@@ -1,6 +1,10 @@
 <ion-card>
-  <app-header title="About"></app-header>
-  <ion-card-content>
+  <div #card class="full">
+  <div class="small">
+    <ion-card-header>
+      <ion-card-title>About</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
     <p>Tim is...
     {{['a full stack software developer.',
     'a passionate and driven individual.',
@@ -10,4 +14,6 @@
     'eager to learn and expand into uncharted territories.',
     'yearning to make a positive impact within your organization.'] | typing | async}}</p>
     </ion-card-content>
+    </div>
+  </div>
 </ion-card>
