@@ -11,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./bulletin.component.scss']
 })
 export class BulletinComponent implements OnInit {
+  loading: boolean = true;
   posts$: Observable<Post[]> = new Observable();
   rowHeight: BehaviorSubject<string> = new BehaviorSubject('4:1');
 
@@ -20,6 +21,7 @@ export class BulletinComponent implements OnInit {
     this.fetchPosts();
     this.postService.getPosts().subscribe({
       next: (posts) => {
+        this.loading = false;
         this.rowHeight.next(`${posts.length/1.5}:1`);
       }
     });

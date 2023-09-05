@@ -1,3 +1,4 @@
+<ion-spinner *ngIf="loading" name="default"></ion-spinner>
 <mat-grid-list cols="3" [rowHeight]="(rowHeight | async) ?? 0">
 <mat-grid-tile class="flip-card" *ngFor="let post of posts$ | async">
   <div class="flip-card-inner">
