@@ -12,7 +12,8 @@ p{
 
 .small{
   background: transparent;
-  backdrop-filter: blur(45px);
+  backdrop-filter: saturate(20%) blur(45px);
+  -webkit-backdrop-filter: saturate(20%) blur(45px);
   color: white!important;
   text-shadow:
       0.07em 0 black,
