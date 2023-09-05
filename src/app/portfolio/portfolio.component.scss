@@ -1,3 +1,10 @@
 iframe {
   zoom: 1.5;
 }
+
+dotlottie-player{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+}

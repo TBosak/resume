@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { CCSOMOImg, CDImg, GRHSImg, VizImg } from '../constants';
 
 @Component({
@@ -6,7 +6,9 @@ import { CCSOMOImg, CDImg, GRHSImg, VizImg } from '../constants';
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.scss']
 })
-export class HistoryComponent implements OnInit {
+export class HistoryComponent implements OnInit, AfterViewInit {
+  display: boolean = false;
+  @ViewChild('player') dotlottie: any | undefined;
   jobs: any[] = [
     {title: 'Software Engineer',
     company: 'Vizient, Inc.',
@@ -47,6 +49,12 @@ export class HistoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.dotlottie?.nativeElement.addEventListener('complete', () => {
+      this.display = true;
+    });
   }
 
 }

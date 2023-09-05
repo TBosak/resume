@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { link } from 'fs';
 
 @Component({
@@ -6,7 +6,9 @@ import { link } from 'fs';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
+  display: boolean = false;
+  @ViewChild('player') dotlottie: any | undefined;
   projects = [
     {
      title: 'Notomato',
@@ -37,5 +39,11 @@ export class PortfolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.dotlottie?.nativeElement.addEventListener('complete', () => {
+      this.display = true;
+    });
   }
 }

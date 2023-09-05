@@ -13,9 +13,7 @@ export class AboutComponent implements OnInit {
   title: string = 'About';
   @ViewChild('card') card: ElementRef<HTMLDivElement> | undefined;
   images!: Observable<any>;
-  constructor(private persistence: PersistenceService) { }
-
-  ngOnInit() {
+  constructor(private persistence: PersistenceService) {
     this.images = from([
       'assets/slideshow/1.jpg',
       'assets/slideshow/2.jpg',
@@ -25,14 +23,15 @@ export class AboutComponent implements OnInit {
     ]).pipe(
       concatMap(img => of(img).pipe(delay(2500))),
       repeat());
-
-      this.images.subscribe({
-        next: (img) => {
-          if(this.card){
-            this.card.nativeElement.style.backgroundImage = `url(${img})`;
-          }
-        }
-      });
   }
 
+  ngOnInit() {
+    this.images.subscribe({
+      next: (img) => {
+        if(this.card){
+          this.card.nativeElement.style.backgroundImage = `url(${img})`;
+        }
+      }
+    });
+}
 }

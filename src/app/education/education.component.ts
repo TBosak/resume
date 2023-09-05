@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { CHSImg, SEMOImg } from '../constants';
 
 @Component({
@@ -6,8 +6,9 @@ import { CHSImg, SEMOImg } from '../constants';
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.scss']
 })
-export class EducationComponent implements OnInit {
-
+export class EducationComponent implements OnInit, AfterViewInit {
+  display: boolean = false;
+  @ViewChild('player') dotlottie: any | undefined;
   schools: any[] = [
     {title: 'Southeast Missouri State University',
     degree: "Bachelor's Degree, Political Science",
@@ -25,6 +26,12 @@ export class EducationComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.dotlottie?.nativeElement.addEventListener('complete', () => {
+      this.display = true;
+    });
   }
 
 }
