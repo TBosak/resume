@@ -40,7 +40,7 @@ a {display: block;}
 button {margin-bottom: 50px;}
 
 ion-spinner{
-  width: 100px;
-  height: 100px;
-  color: var(--ion-color-primary);
+  --width: 100px;
+  --height: 100px;
+  --color: var(--ion-color-primary);
 }
