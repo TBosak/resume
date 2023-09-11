@@ -9,14 +9,38 @@
           <ion-note><ion-icon name="logo-github"/> <a href="https://github.com/tbosak" style="text-decoration: none;"> https://github.com/tbosak</a></ion-note>
           <ion-note><ion-icon name="logo-linkedin"/> <a href="https://www.linkedin.com/in/tbarani" style="text-decoration: none;"> https://www.linkedin.com/in/tbarani</a></ion-note>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item [href]="[p.url]" lines="none" detail="false" [color]="(this.viewedElement | async) === (p.associated) ? 'light' : ''">
               <ion-icon slot="start" [name]="p.icon" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+        <!-- <div id="where">
+          {{this.viewedElement}}
+        </div> -->
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
+    <div id="main-content">
+      <div #aboutDiv>
+      <app-about id="about"></app-about>
+      </div>
+      <div #expDiv>
+      <app-history id="experience"></app-history>
+      </div>
+      <div #eduDiv>
+      <app-education id="education"></app-education>
+      </div>
+      <div #portfolioDiv>
+      <app-portfolio id="portfolio"></app-portfolio>
+      </div>
+      <div #bulletinDiv>
+        <app-bulletin id="bulletin"></app-bulletin>
+        </div>
+    </div>
   </ion-split-pane>
 </ion-app>
+<dotlottie-player *ngIf="(viewedElement | async)==='about'" id="player" #player src="../../assets/lottie/about.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
+<dotlottie-player *ngIf="(viewedElement | async)==='experience'" id="player" #player src="../../assets/lottie/development.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
+<dotlottie-player *ngIf="(viewedElement | async)==='education'" id="player" #player src="../../assets/lottie/education.json" background="transparent" speed="2" mode="normal" autoplay loop></dotlottie-player>
+<dotlottie-player *ngIf="(viewedElement | async)==='portfolio'" id="player" #player src="../../assets/lottie/portfolio.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
+<dotlottie-player *ngIf="(viewedElement | async)==='bulletin'" id="player" #player src="../../assets/lottie/references.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>

@@ -1,7 +1,7 @@
 <ion-card>
   <app-header title="Experience"></app-header>
   <ion-card-content>
-    <dotlottie-player *ngIf="!display" #player src="../../assets/lottie/development.json" background="transparent" speed="1" mode="normal" autoplay></dotlottie-player>
+    <!-- <dotlottie-player *ngIf="!display" #player src="../../assets/lottie/development.json" background="transparent" speed="1" mode="normal" autoplay></dotlottie-player> -->
     <ng-template let-job ngFor [ngForOf]="jobs">
     <app-job-card
       [jobtitle]="job.title"

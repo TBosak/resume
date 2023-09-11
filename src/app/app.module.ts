@@ -4,7 +4,6 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AboutComponent } from './about/about.component';
@@ -42,7 +41,7 @@ import { TypingPipe } from './pipes/typing.pipe';
       SafePipe,
       TypingPipe
    ],
-  imports: [BrowserModule, BrowserAnimationsModule, ReactiveFormsModule, IonicModule.forRoot(), AppRoutingModule, FlexLayoutModule, HttpClientModule, MatGridListModule, MatDialogModule, MatFormFieldModule, MatInputModule, ScrollingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, ReactiveFormsModule, IonicModule.forRoot(), FlexLayoutModule, HttpClientModule, MatGridListModule, MatDialogModule, MatFormFieldModule, MatInputModule, ScrollingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   entryComponents: [BulletinDialogComponent],

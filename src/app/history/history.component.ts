@@ -1,12 +1,13 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { CCSOMOImg, CDImg, GRHSImg, VizImg } from '../constants';
+import { IonCard } from '@ionic/angular';
 
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.scss']
 })
-export class HistoryComponent implements OnInit, AfterViewInit {
+export class HistoryComponent implements OnInit, AfterViewInit{
   display: boolean = false;
   @ViewChild('player') dotlottie: any | undefined;
   jobs: any[] = [
@@ -52,9 +53,9 @@ export class HistoryComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.dotlottie?.nativeElement.addEventListener('complete', () => {
-      this.display = true;
-    });
+    // this.dotlottie?.nativeElement.addEventListener('complete', () => {
+    //   this.display = true;
+    // });
   }
 
 }

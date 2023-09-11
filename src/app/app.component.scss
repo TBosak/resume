@@ -3,8 +3,8 @@ ion-note:last-of-type{
 }
 
 ion-split-pane {
-  --side-width: 350px;
-  --side-max-width: 350px;
+  --side-width: 15vw;
+  --side-max-width: 15vw;
 }
 
 ion-menu ion-content {
@@ -123,6 +123,20 @@ ion-note {
   color: var(--ion-color-medium-shade);
 }
 
-ion-item.selected {
-  --color: var(--ion-color-primary);
+#main-content{
+  overflow-y: auto;
+  overflow-x: hidden;
+  *{
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+#player{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 5em;
+  height: 5em;
 }

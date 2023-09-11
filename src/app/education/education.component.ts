@@ -29,9 +29,9 @@ export class EducationComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.dotlottie?.nativeElement.addEventListener('complete', () => {
-      this.display = true;
-    });
+    // this.dotlottie?.nativeElement.addEventListener('complete', () => {
+    //   this.display = true;
+    // });
   }
 
 }

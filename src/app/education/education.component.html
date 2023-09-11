@@ -1,7 +1,7 @@
 <ion-card>
   <app-header title="Education"></app-header>
   <ion-card-content>
-    <dotlottie-player *ngIf="!display" #player src="../../assets/lottie/education.json" background="transparent" speed="3" mode="normal" autoplay></dotlottie-player>
+    <!-- <dotlottie-player *ngIf="!display" #player src="../../assets/lottie/education.json" background="transparent" speed="3" mode="normal" autoplay></dotlottie-player> -->
     <app-edu-card
       *ngFor="let school of schools"
       [school]="school.title"
