@@ -3,11 +3,11 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Tim Barani</ion-list-header>
-          <ion-note><ion-icon name="mail"/> <a href="mailto:timb63701@gmail.com" style="text-decoration: none;"> timb63701@gmail.com</a></ion-note>
-          <ion-note><ion-icon name="location"/> Cape Girardeau, MO</ion-note>
-          <ion-note><ion-icon name="logo-github"/> <a href="https://github.com/tbosak" style="text-decoration: none;"> https://github.com/tbosak</a></ion-note>
-          <ion-note><ion-icon name="logo-linkedin"/> <a href="https://www.linkedin.com/in/tbarani" style="text-decoration: none;"> https://www.linkedin.com/in/tbarani</a></ion-note>
+          <ion-list-header id="header">Tim Barani</ion-list-header>
+          <ion-note><ion-icon name="mail"/> <a href="mailto:timb63701@gmail.com" style="text-decoration: none;"> timb63701@gmail.com</a></ion-note><br>
+          <ion-note><ion-icon name="location"/> Cape Girardeau, MO</ion-note><br>
+          <ion-note><ion-icon name="logo-github"/> <a href="https://github.com/tbosak" style="text-decoration: none;"> https://github.com/tbosak</a></ion-note><br>
+          <ion-note><ion-icon name="logo-linkedin"/> <a href="https://www.linkedin.com/in/tbarani" style="text-decoration: none;"> https://www.linkedin.com/in/tbarani</a></ion-note><br>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item [href]="[p.url]" lines="none" detail="false" [color]="(this.viewedElement | async) === (p.associated) ? 'light' : ''">
               <ion-icon slot="start" [name]="p.icon" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>

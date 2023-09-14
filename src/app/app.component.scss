@@ -140,3 +140,7 @@ ion-note {
   width: 5em;
   height: 5em;
 }
+
+#main-content>div:not(:has(#about)){
+    margin-top:10em;
+}
