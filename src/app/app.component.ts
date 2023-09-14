@@ -51,7 +51,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit() {
-    interval(1000).subscribe((val) => {
+    interval(500).subscribe((val) => {
       this.isScrolledIntoView();
     });
   }
