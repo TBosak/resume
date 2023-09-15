@@ -23,12 +23,5 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.images.subscribe({
-      next: (img) => {
-        if(this.card){
-          this.card.nativeElement.style.backgroundImage = `url(${img})`;
-        }
-      }
-    });
 }
 }

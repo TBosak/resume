@@ -1,5 +1,5 @@
 <ion-card>
-  <div #card class="full">
+  <div #card [style.backgroundImage]="'url('+ (images | async) +')'" class="full">
   <div class="small">
     <ion-card-header>
       <ion-card-title>About</ion-card-title>

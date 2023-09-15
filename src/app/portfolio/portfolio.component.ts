@@ -12,7 +12,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   projects = [
     {
      title: 'Notomato',
-     description:'🍅📝Pomodoro notes app built in Ionic & Angular frameworks, using Dexie.js to persist tasks/notes in IndexedDB📝🍅',
+     description:'Pomodoro notes app built in Ionic & Angular frameworks, using Dexie.js to persist tasks/notes in IndexedDB',
      link: 'https://notomato.vercel.app/',
      img: 'https://i.imgur.com/5Z2ZQ8M.png'
     },
