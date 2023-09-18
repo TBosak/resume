@@ -8,7 +8,7 @@ import { Observable, concatMap, delay, from, of, repeat } from 'rxjs';
 })
 export class AboutComponent implements OnInit {
   title: string = 'About';
-  @ViewChild('card') card: ElementRef<HTMLDivElement> | undefined;
+  @ViewChild('bgimage') bg: ElementRef<HTMLImageElement> | undefined;
   images!: Observable<any>;
   constructor() {
     this.images = from([
@@ -25,8 +25,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.images.subscribe({
       next: (img) => {
-        if(this.card){
-          this.card.nativeElement.style.backgroundImage = `url(${img})`;
+        if(this.bg){
+          this.bg.nativeElement.src = img;
         }
       }
     });

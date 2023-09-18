@@ -7,6 +7,7 @@ import { CHSImg, SEMOImg } from '../constants';
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit, AfterViewInit {
+  intObserver: any;
   display: boolean = false;
   @ViewChild('player') dotlottie: any | undefined;
   schools: any[] = [
@@ -29,9 +30,6 @@ export class EducationComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // this.dotlottie?.nativeElement.addEventListener('complete', () => {
-    //   this.display = true;
-    // });
   }
 
 }

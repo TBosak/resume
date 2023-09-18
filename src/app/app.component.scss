@@ -141,6 +141,19 @@ ion-note {
   height: 5em;
 }
 
-#main-content>div:not(:has(#about)){
+#main-content>div:not(#about){
     margin-top:10em;
+}
+
+.hidden{
+  opacity: 0;
+  transition: all 1.5s;
+  transform: translateX(-100%);
+  filter: blur(5px);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
