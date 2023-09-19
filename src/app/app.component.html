@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane contentId="main-content" when="sm">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
@@ -15,12 +15,9 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-        <!-- <div id="where">
-          {{this.viewedElement}}
-        </div> -->
       </ion-content>
     </ion-menu>
-    <div id="main-content">
+    <div id="main-content" []>
       <div #aboutDiv class="hidden" id="about">
       <app-about></app-about>
       </div>
