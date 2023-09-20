@@ -157,3 +157,42 @@ ion-note {
   filter: blur(0);
   transform: translateX(0);
 }
+
+#full-name{
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#first-name{
+color: #72e2d5;
+}
+
+#last-name{
+color: #23a6a2;
+}
+
+.centered{
+  text-align: center;
+}
+
+#skill{
+  margin-top: 0;
+  color: darkgray!important;
+}
+
+#linkedin{
+  position:fixed;
+  bottom: 10rem;
+  left: 2.5rem;
+  width: 10em;
+  height: 10em;
+}
+
+#github{
+  position:fixed;
+  bottom: 8rem;
+  right: 0;
+  width: 15em;
+  height: 15em;
+}

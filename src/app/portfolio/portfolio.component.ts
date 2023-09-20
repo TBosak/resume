@@ -6,9 +6,7 @@ import { link } from 'fs';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit, AfterViewInit {
-  display: boolean = false;
-  @ViewChild('player') dotlottie: any | undefined;
+export class PortfolioComponent {
   projects = [
     {
      title: 'Notomato',
@@ -37,13 +35,4 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   ]
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
-  ngAfterViewInit() {
-    // this.dotlottie?.nativeElement.addEventListener('complete', () => {
-    //   this.display = true;
-    // });
-  }
 }

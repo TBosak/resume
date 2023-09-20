@@ -1,12 +1,12 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { BehaviorSubject, Observable, interval } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { BehaviorSubject, interval } from 'rxjs';
 import { PersistenceService } from 'src/services/persistence.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
   intObserver: any;
   public appPages = [
     { title: 'About', url: '/#about', icon: 'information-circle', associated: 'about' },
@@ -37,5 +37,8 @@ export class AppComponent implements OnInit {
     hidden.forEach((item) => {
       this.intObserver.observe(item);
     });
+  }
+
+  ngAfterViewInit(): void {
   }
 }

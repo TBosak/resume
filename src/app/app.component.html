@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content" when="sm">
+  <ion-split-pane class="desktop" contentId="main-content" when="sm">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
@@ -17,7 +17,7 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-    <div id="main-content" []>
+    <div id="main-content">
       <div #aboutDiv class="hidden" id="about">
       <app-about></app-about>
       </div>
@@ -35,9 +35,25 @@
         </div>
     </div>
   </ion-split-pane>
+  <div class="mobile">
+    <div class="centered">
+      <h1 id="full-name">
+        <p style="margin-bottom: 0px;"><a id="first-name">TIM</a><a id="last-name">BARANI</a></p>
+        <p id="skill">{{(['DESIGN','DEVELOPMENT','C#','ANGULAR','.NET','SQL','GIT','NODE.JS','TYPESCRIPT','JAVASCRIPT','CYPRESS','DOCKER','FULL STACK'] | typing | async)}}</p>
+      </h1>
+    </div>
+    <a href="https://www.linkedin.com/in/tbarani/">
+    <dotlottie-player id="linkedin" #player src="../../assets/lottie/linkedin.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
+    </a>
+    <a href="https://github.com/TBosak">
+    <dotlottie-player id="github" #player src="../../assets/lottie/github.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
+  </a>
+  </div>
 </ion-app>
+<div class="desktop">
 <dotlottie-player *ngIf="(viewedElement | async)==='about'" id="player" #player src="../../assets/lottie/about.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
 <dotlottie-player *ngIf="(viewedElement | async)==='experience'" id="player" #player src="../../assets/lottie/development.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
 <dotlottie-player *ngIf="(viewedElement | async)==='education'" id="player" #player src="../../assets/lottie/education.json" background="transparent" speed="2" mode="normal" autoplay loop></dotlottie-player>
 <dotlottie-player *ngIf="(viewedElement | async)==='portfolio'" id="player" #player src="../../assets/lottie/portfolio.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
 <dotlottie-player *ngIf="(viewedElement | async)==='bulletin'" id="player" #player src="../../assets/lottie/references.json" background="transparent" speed="1" mode="normal" autoplay loop></dotlottie-player>
+</div>

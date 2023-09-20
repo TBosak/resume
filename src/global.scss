@@ -31,6 +31,20 @@ ion-card{
   }
 }
 
+.mobile{
+  visibility: hidden;
+  @media(max-width: 576px){
+    visibility: visible;
+  }
+}
+
+.desktop{
+  visibility: visible;
+  @media(max-width: 576px){
+    visibility: hidden;
+  }
+}
+
 ion-note{
   margin-bottom: 5px !important;
 }
